@@ -3,10 +3,10 @@ install:
 	pip install --upgrade pip && pip install -r requirements.txt
 format:
 	# format code
-	black **/*.py
+	black src/
 lint:
 	# lint code
-	pylint --disable=R,C **/*.py
+	pylint --disable=R,C src/
 test:
 	# run all tests
 	python -m tests
@@ -14,3 +14,4 @@ coverage:
 	# run coverage
 	coverage run -m unittest discover -s tests
 	coverage report -m
+all: format lint test coverage

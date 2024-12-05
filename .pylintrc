@@ -1,2 +1,2 @@
 [MASTER]
-ignore = venv/, .tox/
+ignore=venv
