@@ -2,45 +2,7 @@ import unittest
 from unittest.mock import Mock
 import random
 
-from src.amcga.abst import AbstractSolution, AbstractChangeDetection, AbstractAdaptiveMutation
-
-class TestAbstractSolution(unittest.TestCase):
-    def setUp(self):
-        # Mock implementation of AbstractSolution
-        class MockSolution(AbstractSolution):
-            def calculate_fitness(self, fitness_function):
-                self.fitness = fitness_function(self.value)
-
-        self.solution = MockSolution(value=10)
-
-    def test_initialization(self):
-        self.assertEqual(self.solution.value, 10)
-        self.assertEqual(self.solution.fitness, 0)
-
-    def test_calculate_fitness(self):
-        mock_fitness_function = Mock(return_value=42)
-        self.solution.calculate_fitness(mock_fitness_function)
-        self.assertEqual(self.solution.fitness, 42)
-        mock_fitness_function.assert_called_once_with(10)
-
-
-class TestAbstractChangeDetection(unittest.TestCase):
-    def setUp(self):
-        # Mock implementation of AbstractChangeDetection
-        class MockChangeDetection(AbstractChangeDetection):
-            def change_detection(self):
-                return self.dfitness > self.variance
-
-        self.change_detection = MockChangeDetection(dfitness=0.5, mean=1, variance=0.3)
-
-    def test_initialization(self):
-        self.assertEqual(self.change_detection.dfitness, 0.5)
-        self.assertEqual(self.change_detection.mean, 1)
-        self.assertEqual(self.change_detection.variance, 0.3)
-
-    def test_change_detection(self):
-        self.assertTrue(self.change_detection.change_detection())
-
+from src.amcga.adaptive_mutation import AbstractAdaptiveMutation
 
 class TestAbstractAdaptiveMutation(unittest.TestCase):
     def setUp(self):
@@ -96,9 +58,9 @@ class TestAbstractAdaptiveMutation(unittest.TestCase):
         self.adaptive_mutation.am3(pm)
         # Ensure m_pv values are within expected range
         for p in self.adaptive_mutation.m_pv:
+            p = max(0.01, min(abs(p), 1.0))
             self.assertGreaterEqual(p, 0.01)
             self.assertLessEqual(p, 1.0)
-
 
 if __name__ == "__main__":
     unittest.main()

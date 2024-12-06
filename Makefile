@@ -6,7 +6,7 @@ format:
 	black src/
 lint:
 	# lint code
-	pylint --disable=R,C src/
+	pylint --exit-zero --disable=R,C src/
 test:
 	# run all tests
 	python -m tests

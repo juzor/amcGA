@@ -6,67 +6,6 @@ from abc import ABC, abstractmethod
 import random
 
 
-class AbstractSolution(ABC):
-    """
-    Abstract base class for representing a solution in an optimization problem.
-    Attributes:
-        value: The solution's representation (e.g., binary string, array).
-        fitness: The fitness value of the solution.
-    """
-
-    def __init__(self, value):
-        """
-        Initializes the solution with a value and a default fitness of 0.
-
-        Args:
-            value: The representation of the solution.
-        """
-        self.value = value
-        self.fitness = 0
-
-    @abstractmethod
-    def calculate_fitness(self, fitness_function):
-        """
-        Abstract method to calculate the fitness of the solution.
-
-        Args:
-            fitness_function: A callable that takes the solution's
-            value and returns a fitness score.
-        """
-        pass
-
-
-class AbstractChangeDetection(ABC):
-    """
-    Abstract base class for detecting changes in fitness over time.
-
-    Attributes:
-        dfitness: The fitness difference threshold for detecting changes.
-        mean: The mean value for fitness variation detection.
-        variance: The variance threshold for fitness variation detection.
-    """
-
-    def __init__(self, dfitness, mean=1, variance=0.3):
-        """
-        Initializes change detection with specified thresholds.
-
-        Args:
-            dfitness: Fitness change threshold.
-            mean: Mean value for change detection.
-            variance: Variance threshold for change detection.
-        """
-        self.dfitness = dfitness
-        self.mean = mean
-        self.variance = variance
-
-    @abstractmethod
-    def change_detection(self):
-        """
-        Abstract method to implement fitness change detection logic.
-        """
-        pass
-
-
 class AbstractAdaptiveMutation(ABC):
     """
     Abstract base class for adaptive mutation strategies in genetic algorithms.
