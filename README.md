@@ -1,4 +1,4 @@
-[![Lint code](https://github.com/juzor/amcGA/actions/workflows/lint.yml/badge.svg)](https://github.com/juzor/amcGA/actions/workflows/lint.yml) [![Run tests](https://github.com/juzor/amcGA/actions/workflows/test.yml/badge.svg)](https://github.com/juzor/amcGA/actions/workflows/test.yml) [![Run coverage](https://github.com/juzor/amcGA/actions/workflows/coverage.yml/badge.svg)](https://github.com/juzor/amcGA/actions/workflows/coverage.yml)
+[![Lint code](https://github.com/juzor/amcGA/actions/workflows/lint.yml/badge.svg)](https://github.com/juzor/amcGA/actions/workflows/lint.yml) [![Run tests](https://github.com/juzor/amcGA/actions/workflows/test.yml/badge.svg)](https://github.com/juzor/amcGA/actions/workflows/test.yml) [![codecov](https://codecov.io/github/juzor/amcGA/graph/badge.svg?token=0MSC64APMI)](https://codecov.io/github/juzor/amcGA)
 
 # Adaptive Mutation Compact Genetic Algorithm
 
