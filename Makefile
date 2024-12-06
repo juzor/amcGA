@@ -14,4 +14,7 @@ coverage:
 	# run coverage
 	coverage run -m unittest discover -s tests
 	coverage report -m
+report:
+	pytest --cov=src/ --cov-report=xml  # generates coverage.xml
 all: format lint test coverage
+

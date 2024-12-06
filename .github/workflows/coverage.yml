@@ -23,4 +23,9 @@ jobs:
           make install
       - name: Run coverage
         run: |
-          make coverage
+          make report
+      # Upload coverage results (optional, for visual reports)
+      - name: Upload coverage to Coveralls
+        uses: coverallsapp/github-action@v1
+        with:
+          github-token: ${{ secrets.GITHUB_TOKEN }}

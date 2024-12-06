@@ -1,3 +1,7 @@
+[![Lint code](https://github.com/juzor/amcGA/actions/workflows/lint.yml/badge.svg)](https://github.com/juzor/amcGA/actions/workflows/lint.yml)
+
+[![Run tests](https://github.com/juzor/amcGA/actions/workflows/test.yml/badge.svg)](https://github.com/juzor/amcGA/actions/workflows/test.yml)
+
 # Adaptive Mutation Compact Genetic Algorithm
 
 This repository contains the implementation of **Adaptive Mutation Compact Genetic Algorithm (amcGA)**, a compact and efficient approach to solving real-time dynamic optimisation problems. Unlike traditional population-based algorithms, this method is specifically designed for **embedded systems with limited memory**, making it perfect for resource-constrained environments.
