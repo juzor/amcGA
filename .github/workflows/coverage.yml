@@ -1,8 +1,8 @@
-name: Run coverage
+name: Code Coverage
 on: push
 jobs:
   test:
-    name: Run coverage
+    name: Code Coverage
     runs-on: ubuntu-latest
     strategy:
       matrix:
@@ -21,6 +21,10 @@ jobs:
       - name: Install dependencies
         run: |
           make install
-      - name: Run coverage
+      - name: Code Coverage
         run: |
           make report
+      - name: Upload coverage reports to Codecov
+        uses: codecov/codecov-action@v5
+        with:
+          token: ${{ secrets.CODECOV_TOKEN }}
