@@ -1,6 +1,4 @@
-[![Lint code](https://github.com/juzor/amcGA/actions/workflows/lint.yml/badge.svg)](https://github.com/juzor/amcGA/actions/workflows/lint.yml)
-
-[![Run tests](https://github.com/juzor/amcGA/actions/workflows/test.yml/badge.svg)](https://github.com/juzor/amcGA/actions/workflows/test.yml)
+[![Lint code](https://github.com/juzor/amcGA/actions/workflows/lint.yml/badge.svg)](https://github.com/juzor/amcGA/actions/workflows/lint.yml) [![Run tests](https://github.com/juzor/amcGA/actions/workflows/test.yml/badge.svg)](https://github.com/juzor/amcGA/actions/workflows/test.yml) [![Run coverage](https://github.com/juzor/amcGA/actions/workflows/coverage.yml/badge.svg)](https://github.com/juzor/amcGA/actions/workflows/coverage.yml)
 
 # Adaptive Mutation Compact Genetic Algorithm
 
